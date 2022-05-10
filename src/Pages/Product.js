@@ -24,7 +24,9 @@ function Product() {
   setValue(value);
   }
 
-  if(loading) return <h2>Loading plzz wait</h2>
+  if(loading)return <div class="progress">
+  <div class="indeterminate"></div>
+</div>
   if(error) console.log(error)
   if(data) console.log(data)
 
@@ -41,11 +43,12 @@ function Product() {
         price,
         img: images.data[0].attributes.url
       })
+      alert("Added");
   } 
 
   return (
     <>  
-    <div className='container'>
+    <div className='container product-p'>
     <div>
     <Carousel
       value={value}

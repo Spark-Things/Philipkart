@@ -34,14 +34,9 @@ const Home = () => {
    
   
 
-    if(loading) return <h1>loading...please Wait</h1> 
-    
-     if(data){
-       console.log('====================================');
-       console.log(data);
-       console.log('====================================');
-     }
-
+   if(loading)return <div class="progress">
+   <div class="indeterminate"></div></div>
+   
   return (
     <div>
        <Search />

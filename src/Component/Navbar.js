@@ -12,7 +12,7 @@ function Navbar() {
     }
   return (
     <nav>
-    <div class="nav-wrapper #002c44 light-blue lighten-5 navbar">
+   <div class="nav-wrapper #1976d2 blue darken-2 navbar">
       <Link to="/" class="brand-logo left">Philpcart</Link>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <div className='rightNav'>

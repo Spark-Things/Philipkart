@@ -29,15 +29,29 @@ function Search() {
   }
   return (
     <div className='container'>
-       <div className="nav-wrapper">
       <form>
-        <div className="input-field">
-          <input type="search"  onChange={handleChange} required/>
-          <label className="label-icon" for="search"><i className="material-icons">search</i></label>
-          <i className="material-icons">close</i>
+        <div className="input-field searchbar" >
+          <input type="search"  onChange={handleChange} required className="searchx"
+           style={{
+             "width":"700px",
+             "padding":"0px 10px",
+             "border": "1px #cacaca solid",
+             "marginTop":"20px",
+             "borderRadius":"5px",
+             "paddingLeft": "50px"
+           }}
+           placeholder="Search here..."
+          />
+          <label className="label-icon" for="search" style={{
+            "marginLeft":"100px",
+            "marginTop": "10px"
+          }}><i className="material-icons">search</i></label>
+          {/* <i className="material-icons" style={{
+            "marginTop": "10px"
+          }}>close</i> */}
         </div>
       </form>
-    </div>
+    <div>
      {
        (nameQuery == 0) ?  null
               :
@@ -50,6 +64,7 @@ function Search() {
        }
         </div>
      }
+    </div>
     </div>
   )
 }

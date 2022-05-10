@@ -25,8 +25,8 @@ import Category from './Component/Category';
      return(
        <>
        <Navbar/>
+       <Category />
         {element}
-        <Category />
        </>
      )
    }

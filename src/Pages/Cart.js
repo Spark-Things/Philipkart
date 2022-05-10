@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useCart } from 'react-use-cart'
 import Checkout from '../Component/Checkout';
+import emptycart from '../images/cart.png'
 
 function Cart() {
    
@@ -30,7 +31,11 @@ function Cart() {
    const jwt = localStorage.getItem('jwt');
 
 
-   if(isEmpty) return <h1>Your Cart is Empty</h1> 
+   if(isEmpty){return( 
+                   <div className='empty'>
+                      <img src={emptycart} className="cartimage"/>
+                      <h3>Your Cart is Empty</h3>
+                   </div>)}
    if(items){
      console.log(items)
    }
@@ -40,19 +45,24 @@ function Cart() {
          <ul className="collection col m8">
            {
              items.map(item =>(
-           <li class="collection-item avatar">
-               <img src={item.img} alt="" class="circle"/>
+           <li class="collection-item avatar itemcontainer"
+              style={{
+                "paddingLeft":"10px",
+              }}
+              >
+               <img src={item.img} alt="" class="circle" className='pimage'/>
+               <div className='pdiscp'>
                <span class="title">{item.name}</span>
                <p className='green-text'>price - ₹ {item.price} * {item.quantity} = ₹ {item.itemTotal}</p>
                <i className=' secondary-content material-icons red-text'
                onClick={() =>removeItem(item.id)}
                style={{cursor:"pointer"}}>remove_circle</i>
-               
+               </div>
            </li>
              ))
            }
            </ul>
-           <div className="col m3  offset-m1" style={{position:"sticky",top:"2px"}}>
+           <div className="col m3  offset-m1 total" style={{position:"sticky",top:"2px"}}>
              <h6>Total Price</h6>
              <h3> ₹ {cartTotal}</h3>
              {
