@@ -52,7 +52,9 @@ function Cart() {
               >
                <img src={item.img} alt="" class="circle" className='pimage'/>
                <div className='pdiscp'>
-               <span class="title">{item.name}</span>
+               <span class="title truncate" style={{
+            "maxWidth" : "400px"
+          }}>{item.name}</span>
                <p className='green-text'>price - ₹ {item.price} * {item.quantity} = ₹ {item.itemTotal}</p>
                <i className=' secondary-content material-icons red-text'
                onClick={() =>removeItem(item.id)}
