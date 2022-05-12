@@ -23,7 +23,7 @@ const Home = () => {
     variables:{
         "pagination": {
           "page": page,
-          "pageSize": 3
+          "pageSize": 6
         }
     }
   })
@@ -38,9 +38,9 @@ const Home = () => {
    <div class="indeterminate"></div></div>
    
   return (
-    <div>
+    <div className='maintab'>
        <Search />
-      <div className='ProductPage'>
+      <div className='ProductPage container'>
           {
              data.products.data.map( ({id,attributes}) =>{
                 return <Card key={id}

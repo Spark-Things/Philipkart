@@ -9,7 +9,9 @@
   background-color: #1976d2;
    padding: 0px 20px;
 }
-
+.maintab{
+  padding-bottom: 50px;
+}
 
 .ProductPage{
   display: flex;
