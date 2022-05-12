@@ -31,13 +31,14 @@ function Checkoutform() {
 
     const makePayment = async (allformdata) =>{
       try{
-        const res = await fetch(`${BACKEND_URL}/api/orders`,{
-          method:"POST",
+        const res = await fetch(`${BACKEND_URL}/order`,{
+          method:"post",
           headers:{
             "Content-Type":"application/json",
-            "Authorization":"Bearer"+ localStorage.getItem("jwt")
+            "Authorization":"Bearer "+ localStorage.getItem("jwt")
           },
           body:JSON.stringify(allformdata) 
+      
         })
         // console.log("done");
         // console.log(res.json());    
@@ -64,16 +65,16 @@ function Checkoutform() {
          amount:cartTotal,
          items:items
        }
+       console.log(allFormdata);
        setPaymentprocs(true)
        setDone(true)
        await makePayment(allFormdata)
        setPaymentprocs(false)
        emptyCart();
-
       }
       
-      if(done)return<h1 className='green-text'>Payment done succesfully......</h1>
-      if(error)return<h1 className='red-text'>Payment Failed succesfully......</h1>
+      if(done)return<h3 className='green-text'>Payment done succesfully......</h3>
+      if(error)return<h3 className='red-text'>Payment Failed succesfully......</h3>
       if(paymentprocs)return<h1>Payment is Processing..  </h1>                                             
 
   return (

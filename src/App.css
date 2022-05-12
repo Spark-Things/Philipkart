@@ -45,7 +45,7 @@
   object-fit: cover;  
 }
 .product-p{
-  padding: 100px 20px;
+  padding: 15%;
   padding-top: 50px;
   padding-bottom: 180px;
 }
@@ -204,5 +204,8 @@
   }
   .fontsixe{
     font-size: 12px;
+  }
+  .category{
+    right: 10px;
   }
 }
