@@ -4,6 +4,7 @@
   padding: 0;
   font-family: 'Rubik', sans-serif;
 }
+
 .navbar{
   width: 100%;
   background-color: #1976d2;
@@ -46,6 +47,7 @@
 .product-p{
   padding: 100px 20px;
   padding-top: 50px;
+  padding-bottom: 180px;
 }
 
 .card-content{
@@ -66,6 +68,7 @@
 }
 
 .category{
+  width: max-content;
   position: fixed;
   bottom: 30px;
   right: 20px;
@@ -158,12 +161,9 @@
     position: absolute;
     right: 0;
   }
-  .searchbar{
-    padding-left: 5%;
-  }
   .searchx{
-    padding-left: 2px;
-    max-width: 300px;
+    margin: 0 5px;
+    max-width: 280px;
   }
   .sicon{
     display: none;

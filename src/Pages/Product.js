@@ -49,7 +49,7 @@ function Product() {
 
   return (
     <>  
-    <div className='container product-p'>
+    <div className='product-p'>
     <div>
     <Carousel
       value={value}
