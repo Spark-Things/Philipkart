@@ -34,14 +34,18 @@ function Cart() {
    if(isEmpty){return( 
                    <div className='empty'>
                       <img src={emptycart} className="cartimage"/>
-                      <h3>Your Cart is Empty</h3>
+                      <span>Your Cart is Empty</span>
                    </div>)}
    if(items){
      console.log(items)
    }
   return (
     <>
-       <div className='container row'>
+       <div className='container row'
+         style={{
+           "width":"100%"
+         }}
+       >
          <ul className="collection col m8">
            {
              items.map(item =>(
@@ -52,13 +56,13 @@ function Cart() {
               >
                <img src={item.img} alt="" class="circle" className='pimage'/>
                <div className='pdiscp'>
-               <span class="title truncate" style={{
-            "maxWidth" : "400px"
+               <span class="title truncate pctitle" style={{
+            "Width" : "100%"
           }}>{item.name}</span>
                <p className='green-text'>price - ₹ {item.price} * {item.quantity} = ₹ {item.itemTotal}</p>
                <i className=' secondary-content material-icons red-text'
                onClick={() =>removeItem(item.id)}
-               style={{cursor:"pointer"}}>remove_circle</i>
+               style={{cursor:"pointer","float":"left"}}>remove_circle</i>
                </div>
            </li>
              ))

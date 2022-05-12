@@ -19,6 +19,7 @@ function Product() {
   })
 
   const [value, setValue] = useState(0);
+  const [added, setAdded] = useState(false);
 
   const onChange = value => {
   setValue(value);
@@ -43,7 +44,7 @@ function Product() {
         price,
         img: images.data[0].attributes.url
       })
-      alert("Added");
+      setAdded(true);
   } 
 
   return (
@@ -57,7 +58,7 @@ function Product() {
     >
      {
         images.data.map(({attributes}) =>{
-           return <img style={{height: "50vh"}} src={attributes.url} />
+           return <img style={{height: "50vh"}} src={attributes.url} className="PmainImage" />
         }
 
         )
@@ -75,10 +76,19 @@ function Product() {
       }
       />
        </div>
-       <h2>{name}</h2>
+       <h4>{name}</h4>
        <p>{description}</p>
-       <h2> ₹ {price}</h2>
+       <h4> ₹ {price}</h4>
        <button className='btn blue' onClick={addTocart}>ADD TO CART</button>
+      { 
+         added ?
+          <p className='cart-panel green' style={{
+            "padding":"20px",
+            "marginTop":"20px"
+          }}>Item Added To Cart !..</p>
+          :
+          null
+      }
     </div>
     </>
   )

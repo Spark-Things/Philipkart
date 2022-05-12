@@ -10,7 +10,7 @@
    padding: 0px 20px;
 }
 .maintab{
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 .ProductPage{
@@ -79,12 +79,15 @@
   background-color: #7e7e7e;
   color: white;
 }
+.mid{
+  margin: 0 auto;
+}
 .searchbar{
+  width: 100%;
   padding-left: 100px;
   width: max-content;
 }
-.searchx{
-  background-color: aqua;
+.searchx{ 
   padding: 10px;
   padding-left: 50px;
 }
@@ -98,6 +101,7 @@
 }
 .pimage{
   float: left;
+  object-fit: scale-down;
   width: 70px;
   height: 70px;
 }
@@ -106,6 +110,9 @@
   margin-left: 10px;
   float: left;
   padding: 5px;
+}
+.pctitle{
+  max-width: 400px;
 }
 .total >h3{
   margin-top: 0px;
@@ -123,12 +130,70 @@
   height: 100px;
   width: 100px;
 }
+.PmainImage{
+  object-fit:scale-down;
+  height: max-content;
+  width: 100%;
+}
 
-@media screen and (max-width: 1000px) { 
+@media screen and (max-width: 995px) { 
+  .sleft{
+    position: absolute;
+    left:0px;
+  }
   .navbar{
-    padding: 0 200px;
+    padding: 0;
   }
   .rightNav{
-    text-align: left;
+    width: max-content;
+    display: block;
+  }
+  .sright{
+    position: absolute;
+    right: 0px;
+  }
+  .searchbar{
+    padding-left: 5%;
+  }
+  .searchx{
+    padding-left: 2px;
+    max-width: 300px;
+  }
+  .sicon{
+    display: none;
+  }
+  .row{
+    max-width: 350px;
+  }
+  .itemcontainer{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    height: max-content;
+    max-width: 330px;
+  }
+  .pimage{
+    float: left;
+    width: 30px;
+    height: 30px;
+  }
+  .pctitle{
+    margin-right: 30px;
+    max-width: 220px;
+  }
+  .pdiscp{
+    float: left;
+  }
+  .empty{
+   padding: 6vh;
+  }
+  .cartimage{
+    
+    height: 70px;
+    width: 70px;
+  }
+  .p-card{
+     margin: 10px;
+     width: 330px;
   }
 }

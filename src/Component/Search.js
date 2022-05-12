@@ -30,22 +30,24 @@ function Search() {
   return (
     <div className='container'>
       <form>
-        <div className="input-field searchbar" >
+        <div className='searchconti' >
+        <label className="label-icon" for="search" style={{
+          "position":"absolute",
+            "marginTop": "30px",
+            "marginLeft":"15px"
+          }}><i className="material-icons sicon">search</i></label>
           <input type="search"  onChange={handleChange} required className="searchx"
            style={{
-             "width":"700px",
+             "width":"100%",
              "padding":"0px 10px",
              "border": "1px #cacaca solid",
              "marginTop":"20px",
              "borderRadius":"5px",
              "paddingLeft": "50px"
            }}
-           placeholder="Search here..."
+           placeholder="Search here...                                                                                                                                                                                         <Created By Spark>"
           />
-          <label className="label-icon" for="search" style={{
-            "marginLeft":"100px",
-            "marginTop": "10px"
-          }}><i className="material-icons">search</i></label>
+        
           {/* <i className="material-icons" style={{
             "marginTop": "10px"
           }}>close</i> */}
