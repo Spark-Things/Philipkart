@@ -9,8 +9,14 @@
   background-color: #1976d2;
    padding: 0px 20px;
 }
+.login{
+  margin-right: 5px;
+}
+.fontsixe{
+  font-size: 18px;
+}
 .maintab{
-  padding-bottom: 90px;
+  padding-bottom: 120px;
 }
 
 .ProductPage{
@@ -150,7 +156,7 @@
   }
   .sright{
     position: absolute;
-    right: 0px;
+    right: 0;
   }
   .searchbar{
     padding-left: 5%;
@@ -195,5 +201,8 @@
   .p-card{
      margin: 10px;
      width: 330px;
+  }
+  .fontsixe{
+    font-size: 9px;
   }
 }

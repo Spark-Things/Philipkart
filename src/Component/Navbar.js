@@ -53,8 +53,8 @@ function Navbar() {
               <li className='logoutbtn sright'style={{cursor: "pointer",padding:"0 20px"}}><i className='material-icons medium ' onClick={logout}>logout</i></li>
               :
           <>
-          <li className='sright'><Link to="/login">Login</Link></li>
-          <li className='sright'><Link to="/signUp">Sign Up</Link></li>
+          <li className='login'><Link to="/login"><span className='fontsixe'>Login</span></Link></li>
+          <li className='sright'><Link to="/signUp"><span className='fontsixe'>Sign Up</span></Link></li>
           </>
         }
         </div>
